@@ -49,7 +49,7 @@ end
 function M.zz(context)
   local win_height = context.viewport.height
   local target_topline = context.cursor.line - math.floor(win_height / 2)
-  target_topline = math.max(1, math.min(target_topline, context.buffer.line_count - win_height + 1))
+  target_topline = math.max(1, target_topline)
 
   return {
     cursor = { line = context.cursor.line, col = context.cursor.col },
