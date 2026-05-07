@@ -3,7 +3,7 @@ local M = {}
 local function calculate_topline(target_line, context)
   local win_height = context.viewport.height
   local topline = target_line - math.floor(win_height / 2)
-  return math.max(1, math.min(topline, context.buffer.line_count - win_height + 1))
+  return math.max(1, math.min(topline, context.buffer.line_count + 1))
 end
 
 function M.ctrl_d(context)
